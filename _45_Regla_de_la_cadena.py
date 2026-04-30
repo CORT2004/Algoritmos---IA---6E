@@ -38,8 +38,8 @@ def chain_rule_trace(probabilities, names):
 
 # ==========================================
 # PASO 1: PEDIR NÚMERO DE EVENTOS
-# ==========================================
-n = int(input("¿Cuántos eventos quieres calcular?: "))
+
+n = int(input("¿Cuántos eventos quieres calcular?(Numero): "))
 
 probabilities = []
 names = []
@@ -47,7 +47,7 @@ names = []
 
 # ==========================================
 # PASO 2: INGRESAR PROBABILIDADES
-# ==========================================
+
 for i in range(n):
     
     # Primer evento (no es condicional)
@@ -59,7 +59,7 @@ for i in range(n):
     else:
         condicion = ",".join([f"X{j+1}" for j in range(i)])
         name = f"P(X{i+1}|{condicion})"
-        p = float(input(f"Ingresa {name}: "))
+        p = float(input(f"Ingresa {name}( <= 1): "))
 
     probabilities.append(p)
     names.append(name)
@@ -67,5 +67,5 @@ for i in range(n):
 
 # ==========================================
 # PASO 3: CALCULAR RESULTADO
-# ==========================================
+
 chain_rule_trace(probabilities, names)

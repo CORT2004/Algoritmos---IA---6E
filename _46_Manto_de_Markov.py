@@ -25,19 +25,19 @@ def markov_blanket_trace(node, parents, children):
 
     # ==========================================
     # PASO 1: PADRES DEL NODO
-    # ==========================================
+    
     padres = parents.get(node, [])
     print(f"\nPaso 1: Padres de {node} → {padres}")
 
     # ==========================================
     # PASO 2: HIJOS DEL NODO
-    # ==========================================
+    
     hijos = children.get(node, [])
     print(f"Paso 2: Hijos de {node} → {hijos}")
 
     # ==========================================
     # PASO 3: PADRES DE LOS HIJOS
-    # ==========================================
+    
     padres_hijos = []
     for h in hijos:
         for p in parents.get(h, []):
@@ -48,7 +48,7 @@ def markov_blanket_trace(node, parents, children):
 
     # ==========================================
     # PASO 4: UNIÓN DE TODOS
-    # ==========================================
+    
     blanket = set(padres + hijos + padres_hijos)
 
     print(f"\nManto de Markov de {node} = {blanket}")
@@ -58,7 +58,7 @@ def markov_blanket_trace(node, parents, children):
 
 # ==========================================
 # PASO 1: CREAR RED BAYESIANA
-# ==========================================
+
 n = int(input("¿Cuántas variables (nodos) tiene la red?: "))
 
 nodes = []
@@ -75,7 +75,7 @@ for i in range(n):
 
 # ==========================================
 # PASO 2: DEFINIR RELACIONES (PADRES)
-# ==========================================
+
 print("\nDefine los padres de cada nodo:")
 
 for node in nodes:
@@ -92,11 +92,11 @@ for node in nodes:
 
 # ==========================================
 # PASO 3: ELEGIR VARIABLE OBJETIVO
-# ==========================================
+
 target = input("\n¿De qué nodo quieres el manto de Markov?: ")
 
 
 # ==========================================
 # PASO 4: CALCULAR MANTO DE MARKOV
-# ==========================================
+
 markov_blanket_trace(target, parents, children)
