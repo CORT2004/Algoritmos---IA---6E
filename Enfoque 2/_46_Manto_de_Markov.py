@@ -95,7 +95,6 @@ for node in nodes:
 
 target = input("\n¿De qué nodo quieres el manto de Markov?: ")
 
-
 # ==========================================
 # PASO 4: CALCULAR MANTO DE MARKOV
 

@@ -7,9 +7,7 @@
 # P(X1) * P(X2|X1) * ... * P(Xn|X1,...,Xn-1)
 
 # ==========================================
-
 # FUNCIÓN PRINCIPAL
-
 # ==========================================
 def chain_rule_trace(probabilities, names):
     """
