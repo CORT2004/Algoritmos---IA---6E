@@ -1,14 +1,13 @@
 # ==========================================
 # ALGORITMO HACIA DELANTE-ATRÁS (HMM)
 # EJEMPLO: ACTIVIDAD FÍSICA
-# ==========================================
 
 states = ["E", "R"]  # Ejercicio, Reposo
 
 
 # ==========================================
 # PASO 1: MODELO
-# ==========================================
+
 
 # Probabilidad inicial
 prior = {"E": 0.5, "R": 0.5}
@@ -28,7 +27,7 @@ sensor = {
 
 # ==========================================
 # PASO 2: NORMALIZAR
-# ==========================================
+
 def normalize(dist):
     total = sum(dist.values())
     return {k: v / total for k, v in dist.items()}
@@ -36,7 +35,7 @@ def normalize(dist):
 
 # ==========================================
 # PASO 3: FORWARD (α)
-# ==========================================
+
 def forward(observations):
     print("\n=== FORWARD ===")
 
@@ -64,7 +63,7 @@ def forward(observations):
 
 # ==========================================
 # PASO 4: BACKWARD (β)
-# ==========================================
+
 def backward(observations):
     print("\n=== BACKWARD ===")
 
@@ -88,7 +87,7 @@ def backward(observations):
 
 # ==========================================
 # PASO 5: COMBINAR (SUAVIZADO)
-# ==========================================
+
 def forward_backward(observations):
     print("\n=== FORWARD-BACKWARD ===")
 
@@ -112,7 +111,7 @@ def forward_backward(observations):
 
 # ==========================================
 # PASO 6: ENTRADA INTERACTIVA
-# ==========================================
+
 print("Observaciones: H (Alto), N (Normal)")
 
 n = int(input("¿Cuántas observaciones?: "))
@@ -125,5 +124,5 @@ for i in range(n):
 
 # ==========================================
 # PASO 7: EJECUCIÓN
-# ==========================================
+
 forward_backward(observations)
