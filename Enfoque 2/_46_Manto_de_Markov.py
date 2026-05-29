@@ -79,7 +79,7 @@ for i in range(n):
 print("\nDefine los padres de cada nodo:")
 
 for node in nodes:
-    entrada = input(f"Padres de {node} (separados por coma, o vacío): ")
+    entrada = input(f"Padres de {node} (separados por coma): ")
     
     if entrada.strip() != "":
         lista_padres = [p.strip() for p in entrada.split(",")]

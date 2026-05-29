@@ -1,14 +1,12 @@
 # ==========================================
 # FILTRADO, PREDICCIÓN Y SUAVIZADO (HMM)
 # EJEMPLO: ROBOT ASPIRADORA
-# ==========================================
 
 # Estados ocultos
 states = ["L", "C"]  # Sala, Cocina
 
 # ==========================================
 # PASO 1: MODELO
-# ==========================================
 
 # Probabilidad inicial
 prior = {"L": 0.6, "C": 0.4}
@@ -28,7 +26,7 @@ sensor = {
 
 # ==========================================
 # PASO 2: NORMALIZAR
-# ==========================================
+
 def normalize(dist):
     total = sum(dist.values())
     return {k: v / total for k, v in dist.items()}
@@ -36,7 +34,7 @@ def normalize(dist):
 
 # ==========================================
 # PASO 3: FILTRADO (FORWARD)
-# ==========================================
+
 def filtering(observations):
     print("\n=== FILTRADO ===")
 
@@ -68,7 +66,7 @@ def filtering(observations):
 
 # ==========================================
 # PASO 4: PREDICCIÓN FUTURA
-# ==========================================
+
 def prediction(belief, steps):
     print("\n=== PREDICCIÓN ===")
 
@@ -88,7 +86,7 @@ def prediction(belief, steps):
 
 # ==========================================
 # PASO 5: SUAVIZADO (BACKWARD SIMPLE)
-# ==========================================
+
 def smoothing(observations):
     print("\n=== SUAVIZADO ===")
 
@@ -123,7 +121,7 @@ def smoothing(observations):
 
 # ==========================================
 # PASO 6: ENTRADA INTERACTIVA
-# ==========================================
+
 print("Observaciones posibles: D (Sucio), L (Limpio)")
 
 n = int(input("¿Cuántas observaciones?: "))
@@ -136,7 +134,7 @@ for i in range(n):
 
 # ==========================================
 # PASO 7: EJECUCIÓN
-# ==========================================
+
 history = filtering(observations)
 
 # última creencia
