@@ -4,7 +4,6 @@
 # Ordenar precios de productos de una tienda en línea
 #
 # El programa:
-# 1. Permite al usuario ingresar los datos.
 # 2. Muestra paso a paso cómo trabaja Quick Sort.
 # 3. Explica la selección del pivote.
 # 4. Muestra las particiones realizadas.
