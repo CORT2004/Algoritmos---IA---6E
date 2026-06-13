@@ -1,0 +1,41 @@
+El concepto de Árbol de Máximo y Mínimo Coste proviene de la teoría de grafos y está relacionado con 
+los árboles de expansión (spanning trees).
+
+Árbol de mínimo coste: conecta todos los puntos de una red con el menor costo total posible.
+Árbol de máximo coste: conecta todos los puntos de una red con el mayor costo total posible sin 
+formar ciclos.
+
+Mientras que el árbol mínimo se usa frecuentemente para ahorrar recursos, el árbol máximo suele 
+utilizarse para analizar escenarios extremos, maximizar cobertura o estudiar la robustez de una red.
+
+En redes, cada conexión (arista) tiene un "costo" asignado (distancia, dinero, tiempo). 
+El árbol garantiza que todos los puntos (nodos) estén unidos de forma continua, sin rutas cerradas. 
+Para hallar estos árboles, se emplean algoritmos lógicos:Para el coste mínimo: Se utilizan el 
+Algoritmos de Kruskal o el Algoritmos de Prim. 
+
+Ambos añaden conexiones de una en una, priorizando los costes más bajos y omitiendo aquellas que 
+generen circuitos cerrados.
+Para el coste máximo: Se utiliza una lógica similar, pero seleccionando las conexiones de mayor valor
+
+Esta teoría es fundamental para diseñar redes eficientes y optimizar recursos:
+Redes de  telecomunicaciones: Determina cómo tender fibra óptica, cables de red o líneas 
+telefónicas conectando todas las centrales o casas con el mínimo gasto de cable.
+
+Transporte y servicios: Ideal para el diseño de rutas de carreteras, vías férreas o el trazado de 
+tuberías de agua, gas y electricidad.
+
+Análisis de datos y clustering: Se aplica en la agrupación jerárquica de datos y en compresión de 
+imágenes
+
+-----------------------------------------------------------------------------------------------------
+El arbol de minimo coste tiene la muisma funcionalidad que los casos anteriores "Dijkstra y Arbol 
+minimo de prim", sirve para eficientizar la manera mas eficiente ya sea economicamente, en tiempo, en
+material o cualquier similar
+
+Sin embargo el de maximo coste ayuda a encontrar los casos extremos, calcular costes, puntos criticos
+entre otros por lo que en la vida diaria puede servir para la misma situacion de un viaje pero quieres
+recorrer la mayor distancia posible (Conocer mas lugares) con este se puede evaluar la ruta que te 
+llevara mas tiempo y recorrido
+
+Y en el mundo la utlizan los elementos militares para ver si en el caso mas extremo sigue sirviendo
+su red de seguridad entre otras
