@@ -1,0 +1,44 @@
+Dijkstra
+Creado por el científico Edsger W. Dijkstra en 1956, 
+es un método eficiente para encontrar el camino más corto desde un nodo (o vértice) de origen
+hacia todos los demás nodos en un grafo. 
+Se utiliza extensamente en redes de computadoras (protocolos de enrutamiento IP) y sistemas de mapas
+
+Inicialización: Asigna una distancia de 0 al nodo de origen y una distancia infinita (∞) 
+a todos los demás nodos del grafo.
+- Exploración: Selecciona el nodo no visitado con la distancia acumulada más baja.
+
+- Actualización (Relajación): Revisa todos los vecinos directos de ese nodo y calcula la distancia 
+desde el origen hasta ellos sumando el costo del camino actual. Si esta nueva ruta es más corta que 
+la que ya tenían registrada, actualiza el valor del vecino.
+
+- Repetición: Marca el nodo actual como "visitado" y repite el proceso hasta que todos los nodos 
+hayan sido procesados
+
+
+Tipo de algoritmo: 
+Utiliza una estrategia voraz (greedy), ya que toma la mejor decisión local en cada paso esperando 
+obtener la ruta global óptima.
+
+Restricción: 
+No funciona correctamente si el grafo tiene aristas con pesos negativos 
+
+Eficiencia: 
+Usualmente se apoya en una estructura de datos de cola de prioridad para optimizar el tiempo de 
+búsqueda del siguiente nodo a evaluar.
+
+------------------------------------------------------------------------------------------------------
+ En el mundo este algoritmo es muy utilizado como se obserba en el ejemplo para definir cuales son los
+ caminos mas rapidos para llegar a una localizacion, google maps por ejemplo
+ En la industria se puede utilizar para saber cual es la ruta que debe de hacer el camion que lleva los
+ materiales para que sea mas eficiente llegar al punto de destino
+
+ En lo personal ya lo uso ya que se utiliza en google maps que utilizo todos los dias que voy a
+ cualquier lugar es la herramienta de apoyo mas eficiente
+ Aunque en lo mas personal me serviria para cuando quiero planear vacaciones ya que de esta manera puedo
+ obtener el camino que conlleve menos tiempo y que visite los puntos que quiero llegar mas rapido
+
+ En mi area de trabajo (La industria) hay diversos problemas que se pueden hacer eficientes por medio
+ de este algoritmo, como un carrito que tiene transportar piezas entre diferentes maquinas o edifios 
+ encontrar el camino mas rapido, eficiente y que consuma menos recursos
+ 
