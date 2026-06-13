@@ -1,0 +1,35 @@
+es un subconjunto de aristas de un grafo conexo y ponderado que conecta todos sus vértices con el 
+menor costo o peso total posible y sin crear ciclos
+
+Es un algoritmo utilizado para encontrar este árbol de expansión. 
+Fue descubierto por el matemático Vojtěch Jarník en 1930 y redescubierto por Robert C. Prim en 1957.
+Su uso es muy común en la vida real para el diseño de redes de telecomunicaciones, distribución de 
+tuberías, cableado eléctrico o incluso para el clustering de datos en inteligencia artificial y 
+finanzas.
+
+Proceso:
+- El proceso es incremental: el árbol "crece" paso a paso uniendo un nodo a la vez.Seleccionar un nodo 
+de inicio: Se elige un nodo o vértice cualquiera del grafo para comenzar a construir el árbol.
+
+- Elegir la arista más barata: Desde el nodo actual (o el grupo de nodos ya conectados), se busca la 
+arista de menor peso que conecte el árbol existente con un nuevo nodo que aún no esté en el árbol.
+
+- Evitar ciclos: La arista elegida se agrega al árbol, asegurándose de no formar un ciclo o circuito 
+cerrado.
+
+- Repetir el proceso: Este paso se repite hasta que todos los nodos del grafo formen parte del 
+árbol. Esto siempre ocurre cuando se han seleccionado exactamente V - 1 aristas (donde V es el número total de vértices en el grafo)
+
+En lenguajes de programación, el algoritmo suele utilizar estructuras de datos como colas de prioridad (o estructuras tipo set) para encontrar rápidamente la arista con menor peso en cada iteración. Esto le da una complejidad algorítmica muy eficiente.
+
+-----------------------------------------------------------------------------------------------------
+
+En el mundo se puede utilizar en un caso hipotetico que se quiera conectar diferentes ciudades con carreteras pero todos tienen un diferente coste y de esta manera se puede obtener el camino mas eficiente para conectar todos los puntos y con el menor coste posible
+Las compañias de instalaciones electricas operan de la misma manera, buscando que todas las conecciones entre si posibles buscando el coste menor y más eficiente
+
+En lo personal lo utilizaria para hacer un sistema de riego en el jardin de la casa de familiares; encontrando la manera de que se riegue todo el jardin con el menor tramo de tuberia posible
+O cuando organizo fiestas como conectar las luces, sonido y todo usando la menor cantidad de cable posible
+
+Al igual en la isdustria, que se necesita conectar sensores, instalacion electrica, tuberia entre otras cosas es la manera de conectar todo lo necesario usando la menor cantidad de material posible eficientizando la implementacion de la instalacion
+
+Aunque se hace inconsientemente esta es una demostracion del mundo y de la vida personal de donde se puede utilizar o donde se utiliza
