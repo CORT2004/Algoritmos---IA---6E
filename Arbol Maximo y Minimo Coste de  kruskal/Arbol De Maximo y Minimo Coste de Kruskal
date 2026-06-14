@@ -1,0 +1,47 @@
+El algoritmo de Kruskal es un algoritmo de teoría de grafos utilizado para construir un:
+
+Árbol de Expansión Mínima (Minimum Spanning Tree - MST) → conecta todos los nodos con el menor costo posible.
+Árbol de Expansión Máxima (Maximum Spanning Tree) → conecta todos los nodos con el mayor costo posible.
+
+A diferencia de Prim, Kruskal:
+
+Ordena todas las conexiones (aristas).
+Va seleccionando una por una.
+Evita formar ciclos.
+Continúa hasta conectar todos los nodos.
+
+El algoritmo sigue estos pasos principales:
+Listar y ordenar: Se recopilan todas las aristas del grafo y se ordenan por su peso (costo).
+Para un Árbol de Mínimo Coste: Se ordenan de menor a mayor.
+Para un Árbol de Máximo Coste: Se ordenan de mayor a menor.
+
+Seleccionar aristas: Se toma la primera arista de la lista y se añade al árbol en construcción
+
+Verificar ciclos: Se comprueba si la arista añadida forma un ciclo (un bucle cerrado) con las 
+aristas seleccionadas previamente.Si no forma un ciclo, se mantiene la arista.Si forma un ciclo, 
+se descarta y se evalúa la siguiente arista en la lista.
+
+Finalizar: El proceso se repite hasta que el árbol contiene todas las conexiones posibles sin 
+crear ciclos o hasta que se han seleccionado exactamente V - 1 aristas.
+
+
+Para que Sirven?
+Mínimo coste: Es ideal para diseñar redes de menor costo, como cableado estructurado, 
+redes de telecomunicaciones, o trazar rutas de tuberías conectando múltiples ubicaciones con el 
+mínimo gasto posible
+
+Máximo coste: Se aplica en escenarios donde se necesita maximizar la capacidad, la seguridad, 
+o la fiabilidad de los enlaces entre diversos puntos.
+
+-----------------------------------------------------------------------------------------------------
+En el mundo la sociedad necesita internet y para este servicio se han instalado la fibra optica,
+las empresas usan estos algoritmos para encontrar la forma de conectar todos los puntos con menor 
+material y por consiguiente menor coste
+
+En casa se puede utilizar al querer hacer un cuarto de entretenimiento (Internet, television, 
+computador, luces, entre otras cosas), la manera mas eficiente de acomodar cada cosa para utilizar 
+menos cable y tuberia
+
+Al igual que el algoritmo anterior funciona en el caso maximo encontrar puntos criticos,
+las peores situaciones posibles entre otras cosas
+Y el minimo para hacer mas eficiente todo
